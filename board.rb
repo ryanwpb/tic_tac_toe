@@ -4,10 +4,10 @@ class Board
 
   def initialize
 
-  puts board ="[1][2][3]
-[4][5][6]
-[7][8][9]"
-  end
+    puts board ="[a1][a2][a3]
+[b4][b5][b6]
+[c7][c8][c9]"
+    end
 end
 
 board= Board.new
