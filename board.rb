@@ -1,14 +1,11 @@
-class Board
 
+  puts "a1 | a2| a3"
+  puts "___________"
+  puts "b1 | b2| b3"
+  puts "___________"
+  puts "c1 | c2| c3"
+      print "\n"
 
-
-  def initialize
-
-    puts board ="[a1][a2][a3]
-[b4][b5][b6]
-[c7][c8][c9]"
-    end
-end
-puts "Enter a position!"
-
-board= Board.new
+puts "Enter a Position!"
+position = gets.chomp
+positions = ["a1","a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"]
