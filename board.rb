@@ -9,5 +9,6 @@ class Board
 [c7][c8][c9]"
     end
 end
+puts "Enter a position!"
 
 board= Board.new
