@@ -7,5 +7,11 @@
       print "\n"
 
 puts "Enter a Position!"
-position = gets.chomp
+place = gets.chomp
 positions = ["a1","a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"]
+
+if positions.include?(place)
+  puts "Ata_boy!"
+else
+  puts "That position is not availble!"
+end
