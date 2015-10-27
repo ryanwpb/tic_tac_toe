@@ -69,10 +69,14 @@ class Board
   def update_board(input)
    if @board_array[row_pick(input)][col_pick(input)] == " "
       @board_array[row_pick(input)][col_pick(input)] = "x"
-   else
+   elsif
+     @board_array[row_pick(input)][col_pick(input)] == "x"
+     @board_array[row_pick(input)][col_pick(input)] = "o"
+   end
+
      puts "This space already taken!"
    end
-  end
+
 
 
 
