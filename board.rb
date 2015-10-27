@@ -1,5 +1,5 @@
-
 @selection_array = ["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"]
+@winner_array = [["a1","a2","a3"],["b1","b2","b3"],["c1","c2","c3"],["a1","b1","c1"],["a2","b2","c2"],["a3","b3","c3"],["a1","b2","c3"],["a3","b2","c1"]]
 @player_array = []
 @board_array = [[" "," "," "],
                 [" "," "," "],
@@ -58,7 +58,9 @@ end
 
 
 while @board_array.any? {|sub_array| sub_array.include?(" ")} do
-
+  @winner_array.each do |array|
+    @board_array.include?(array)
+  end
   puts "Enter a position!"
     input = gets.chomp
     update_board(input)
