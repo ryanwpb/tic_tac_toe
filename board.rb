@@ -62,7 +62,11 @@ def col_pick(input)
 end
 
 def update_board(input)
-  @board_array[row_pick(input)][col_pick(input)] = "X"
+ if @board_array[row_pick(input)][col_pick(input)] == " "
+    @board_array[row_pick(input)][col_pick(input)] = "x"
+ else
+   puts "This space already taken!"
+ end
 end
 
 
