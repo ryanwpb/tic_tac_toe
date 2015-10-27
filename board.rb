@@ -1,5 +1,5 @@
 
-@selection_array = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"]
+@selection_array = ["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"]
 @player_array = []
 @board_array = [[" "," "," "],
                 [" "," "," "],
@@ -13,11 +13,11 @@ def board_template
   print "\n"
   puts "    1    2    3 "
   print "\n"
-  puts "A   A1 | A2 | A3"
+  puts "a   a1 | a2 | a3"
   puts "   --------------"
-  puts "B   B1 | B2 | B3"
+  puts "b   b1 | b2 | b3"
   puts "   --------------"
-  puts "C   C1 | C2 | C3"
+  puts "c   c1 | c2 | c3"
   print "\n"
 end
 
