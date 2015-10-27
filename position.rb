@@ -7,10 +7,21 @@ class Position
 
   def covered
     @covered = positions.each do |c|
-      
+
     end
   end
 end
+
+@Winning = [
+  [0,0],[0,1],[0,2],
+  [1,0],[1,1],[1,2],
+  [2,0],[2,1],[2,2],
+  [0,0],[1,0],[2,0],
+  [0,1],[1,1],[2,1],
+  [0,2],[1,2],[2,2],
+  [0,0],[1,1],[2,2],
+  [0,2],[1,1],[2,0],
+]
 
 # def place(x, y, across)
 #     return false unless @positions.empty?
