@@ -69,20 +69,17 @@ class Board
   def update_board(input)
    if @board_array[row_pick(input)][col_pick(input)] == " "
       @board_array[row_pick(input)][col_pick(input)] = "x"
-   elsif
-     @board_array[row_pick(input)][col_pick(input)] == "x"
-     @board_array[row_pick(input)][col_pick(input)] = "o"
-   end
+    elsif
+     puts "This space already taken, try again!"
+   else  @board_array[row_pick(input)][col_pick(input)] == "x"
+          @board_array[row_pick(input)][col_pick(input)] = "o"
+    end
+ end
 
-     puts "This space already taken!"
-   end
-
-
+end
 
 
   # while @board_array.any?{|sub_array| sub_array.include?(" ")} do
   #   @winning.each do |array|
   #     @board_array.include?(array)
   #   end
-
-end
