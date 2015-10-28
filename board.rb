@@ -1,4 +1,5 @@
 require './position'
+
 class Board
   attr_reader :board_array
   def initialize
@@ -18,6 +19,7 @@ class Board
       [0,0],[1,1],[2,2],
       [0,2],[1,1],[2,0],
     ]
+    @player1_turn = true
   end
 
 
@@ -67,16 +69,21 @@ class Board
   end
 
   def update_board(input)
-   if @board_array[row_pick(input)][col_pick(input)] == " "
+   if @board_array[row_pick(input)][col_pick(input)] == " " && @player1_turn
       @board_array[row_pick(input)][col_pick(input)] = "x"
-    elsif
-     puts "This space already taken, try again!"
-   else  @board_array[row_pick(input)][col_pick(input)] == "x"
-          @board_array[row_pick(input)][col_pick(input)] = "o"
+      switch_turns
+   elsif @board_array[row_pick(input)][col_pick(input)] == " " && @player1_turn == false
+      @board_array[row_pick(input)][col_pick(input)] = "o"
+      switch_turns
+    else
+      puts "That space is occupied, try again!"
     end
- end
-
+  end
 end
+
+  def switch_turns
+   @player1_turn = !@player1_turn
+  end
 
 
   # while @board_array.any?{|sub_array| sub_array.include?(" ")} do
